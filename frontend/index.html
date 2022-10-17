@@ -1,16 +1,33 @@
 <!doctype html>
 <html>
+    
     <head>
+        
         <title>Frontend Example</title>
 
-        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>        
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>   
+        <!--Import for React-->
+        <script src="https://unpkg.com/react@15/dist/react.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>
+
+        <!--Import for Babel-->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>       
     </head>
     <body>
+        <div id="root">
+            <!--Used for React-->
+        </div>
+        
+        <!--Type need to set to "text/babel" to read React in JSX-->
+        <script type="text/babel" src="script.js"></script>
+
+        <div id="Response">{this.state.sResponse}</div>
+
         <div>
             <textarea id="messagesDisplay" name="messagesDisplay" rows="4" cols="50"></textarea>
         </div>
         <div>
-            <button id="testGET">Test GET</button>
+            <button onClick={this.TestGet}>Test GET</button>
             <button id="testPOST">Test POST</button>
         </div>
         <div>
